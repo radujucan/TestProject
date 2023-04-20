@@ -1,0 +1,92 @@
+import java.math.BigDecimal
+// ---- coord pt imaginea care contine punctul (randomx,randomy)-----
+
+int randomx = (vars.get("PozitieRandomX")).toInteger();
+int casutax = (int) Math.floor((randomx - 381550) / 22.216796875);
+
+BigDecimal distantax = new BigDecimal(casutax).multiply(new BigDecimal("22.216796875"));
+BigDecimal coordx1 = distantax.add(new BigDecimal("381550.00000000"));
+BigDecimal coordx2 = coordx1.add(new BigDecimal("22.216796875"));
+
+String pozx1 = coordx1.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozx2 = coordx2.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+
+vars.put("pozitiax1", pozx1);
+vars.put("pozitiax2", pozx2);
+
+int randomy =(vars.get("PozitieRandomY")).toInteger();
+int casutay=(int) Math.floor((randomy-577615)/22.216796875);
+
+BigDecimal distantay = new BigDecimal(casutay).multiply(new BigDecimal("22.216796875"));
+BigDecimal coordy1 = distantay.add(new BigDecimal("577615.00000000"));
+BigDecimal coordy2 = coordy1.add(new BigDecimal("22.216796875"));
+
+String pozy1 = coordy1.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozy2 = coordy2.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+
+vars.put("pozitiay1", pozy1);
+vars.put("pozitiay2", pozy2);
+
+// ---- coord pt celelalte imagini din jur ----
+
+BigDecimal coordx0 = coordx1.subtract(new BigDecimal("22.216796875"));
+BigDecimal coordx3 = coordx2.add(new BigDecimal("22.216796875"));
+BigDecimal coordy0 = coordy1.subtract(new BigDecimal("22.216796875"));
+BigDecimal coordy3 = coordy2.add(new BigDecimal("22.216796875"));
+
+String pozx0 = coordx0.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozx3 = coordx3.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozy0 = coordy0.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozy3 = coordy3.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+
+vars.put("pozitiax0", pozx0);
+vars.put("pozitiax3", pozx3);
+
+
+vars.put("pozitiay0", pozy0);
+vars.put("pozitiay3", pozy3);
+
+// ---- si coord pt alte 2 seturi de imagini din jur un set mai sus, unul mai in dreapta----
+
+BigDecimal coordy4 = coordy3.add(new BigDecimal("22.216796875"));
+BigDecimal coordy5 = coordy4.add(new BigDecimal("22.216796875"));
+BigDecimal coordy6 = coordy5.add(new BigDecimal("22.216796875"));
+
+BigDecimal coordx4 = coordx3.add(new BigDecimal("22.216796875"));
+BigDecimal coordx5 = coordx4.add(new BigDecimal("22.216796875"));
+BigDecimal coordx6 = coordx5.add(new BigDecimal("22.216796875"));
+
+
+String pozy4 = coordy4.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozy5 = coordy5.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozy6 = coordy6.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+
+String pozx4 = coordx4.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozx5 = coordx5.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+String pozx6 = coordx6.setScale(8, BigDecimal.ROUND_HALF_UP).toString();
+
+//log.info('y0: '+ pozy0);
+//log.info('y1: '+ pozy1);
+//log.info('y2: '+ pozy2);
+//log.info('y3: '+ pozy3);
+//log.info('y4: '+ pozy4);
+//log.info('y5: '+ pozy5);
+//log.info('y6: '+ pozy6);
+//log.info('x0: '+ pozx0);
+//log.info('x1: '+ pozx1);
+//log.info('x2: '+ pozx2);
+//log.info('x3: '+ pozx3);
+//log.info('x4: '+ pozx4);
+//log.info('x5: '+ pozx5);
+//log.info('x6: '+ pozx6);
+
+vars.put("pozitiay4", pozy4);
+vars.put("pozitiay5", pozy5);
+vars.put("pozitiay6", pozy6);
+vars.put("pozitiax4", pozx4);
+vars.put("pozitiax5", pozx5);
+vars.put("pozitiax6", pozx6);
+
+
+
+
