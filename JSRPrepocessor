@@ -1,5 +1,16 @@
 import java.math.BigDecimal
-// ---- coord pt imaginea care contine punctul (randomx,randomy)-----
+// Interactiunile principale ale unui user oarecare cu pagina desprecluj.ro/webgis
+// 1) actionarea butonului de Analiza --> analiza3.php cu parametrii x si y (coord centrului hartii din ecran) 
+//          pentru o analiza in zone random ale hartii --> am creat in jmeter 2 Random Variabiles 'PozitieRandomX' si 'PozitieRandomY'
+//         
+// 2) anterior declansarii analizei, un user oarecare va interactiona cu harta, navigand spre zona de interes
+//          fiecare translatare a hartii presupune incarcarea a cel putin 9 'patratele' de harta 
+//          schema din pag8 a prezentarii pdf expliciteaza simularea navigarii in harta si coordonatele necesare
+//          o 'patratica' de harta --> GET desprecluj.ro/cgi-bin/tilecache.cgi cu parametrul BBOX continand coordonatele xstgjos,ystgjos,xdrtsus,ydrtsus
+
+// ---- calcul coord pt imaginea ('patratica') care contine punctul (randomx,randomy)-----
+// de retinut ca 381550 este limita inferioara a lui x; 577617 este limita inferioara a lui y in harta; 22.216796875 este rezolutia sau mai concret distanta dintre xstg si xdr
+//      respectiv yjos si ysus
 
 int randomx = (vars.get("PozitieRandomX")).toInteger();
 int casutax = (int) Math.floor((randomx - 381550) / 22.216796875);
