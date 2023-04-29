@@ -34,4 +34,4 @@ Performance Tests were executed using JMeter.
 
 One of the challenges faced in this project was creating a realistic simulation of user interaction with the web application - in order to create a test Plan in JMeter.
 
-*For example, a user navigating the map and searching for a certain area would require a set of HTTP requests for all the tiles needed to compose the map. To address this challenge, a JSRPreprocessor file was created to compute the necessary parameters for obtaining three sets of map tiles that an ordinary user would need in his search of an area (defined by a random X and Y coordinate) that he would like to analyze.*
+*For example, a user navigating the map and searching for a certain area would require a set of HTTP Requests for all the tiles needed to compose the map. To address this challenge, a JSRPreprocessor file was created to compute the necessary parameters for obtaining three sets of map tiles that an ordinary user would need in his search of an area (defined by a random X and Y coordinate) that he would like to analyze.*
