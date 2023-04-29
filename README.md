@@ -14,7 +14,7 @@
 
 ## About The Project
 
-This project involves testing the website desprecluj.ro using exploratory and performance tests.
+This project involves testing the website desprecluj.ro using Exploratory and Performance Tests.
 
 
 ## Contents
@@ -26,11 +26,12 @@ This project involves testing the website desprecluj.ro using exploratory and pe
 
 ### Description
 
-Test cases were documented in TestLink, and identified bugs were reported in Mantis. 
-Performance tests were executed using JMeter.
+Test Cases were documented in TestLink, and identified bugs were reported in Mantis. 
+Performance Tests were executed using JMeter.
 
 
 ### Challenges 
 
 One of the challenges faced in this project was creating a realistic simulation of user interaction with the web application - in order to create a test Plan in JMeter.
+
 *For example, a user navigating the map and searching for a certain area would require a set of HTTP requests for all the tiles needed to compose the map. To address this challenge, a JSRPreprocessor file was created to compute the necessary parameters for obtaining three sets of map tiles that an ordinary user would need in his search of an area (defined by a random X and Y coordinate) that he would like to analyze.*
