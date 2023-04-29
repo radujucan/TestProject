@@ -21,7 +21,7 @@ This project involves testing the website desprecluj.ro using Exploratory and Pe
 
 * PDF presentation of the project
 * An Excel Report with all the created and executed Test Cases 
-* JSRPreprocesor file for JMeter 
+* JSRPreprocessor file for JMeter 
 
 
 ### Description
